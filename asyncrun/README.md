@@ -22,7 +22,7 @@
 <h3 align="center">async_run</h3>
 
   <p align="center">
-    Asynchronously execute bash commands in selected subdirectories based on specified conditions.
+    Asynchronously execute shell commands in selected subdirectories based on specified conditions.
     <br />
     <a href="https://github.com/kingwingfly/asyncrun"><strong>Explore the docs »</strong></a>
     <br />
