@@ -1,5 +1,5 @@
 [workspace]
-members = ["xxx_core"]
+members = ["asyncrun"]
 resolver = "2"
 
 [workspace.package]
@@ -12,9 +12,10 @@ repository = "https://github.com/kingwingfly/xxx"
 documentation = "https://docs.rs/xxx"
 
 [workspace.dependencies]
-xxx_core = { path = "xxx_core" }
+asyncrun = { path = "asyncrun" }
 # async
 tokio = { version = "1", default-features = false }
+tokio-stream = { version = "0.1", default-features = false }
 
 [profile.release]
 lto = "fat"

@@ -19,5 +19,5 @@ jobs:
         run: .github/scripts/test.sh
       - name: login to crates.io
         run: cargo login ${{ secrets.CRATESIO }}
-      - name: publish CRATE
-        run: .github/scripts/publish.sh CRATE
+      - name: publish asyncrun
+        run: .github/scripts/publish.sh asyncrun
