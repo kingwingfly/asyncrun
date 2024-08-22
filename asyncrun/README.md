@@ -117,7 +117,7 @@ Or compile yourself:
 ## Usage
 
 ```sh
-Asynchronously execute bash commands in selected subdirectories based on specified conditions.
+Asynchronously execute shell commands in selected subdirectories based on specified conditions.
 
 Usage: asyncrun [OPTIONS] [PATH] -- <COMMANDS>...
 
