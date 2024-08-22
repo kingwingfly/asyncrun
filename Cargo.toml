@@ -3,13 +3,12 @@ members = ["asyncrun"]
 resolver = "2"
 
 [workspace.package]
-version = "0.0.3"
+version = "0.0.4"
 authors = ["Louis <836250617@qq.com>"]
 description = ""
 license = "MIT"
 edition = "2021"
 repository = "https://github.com/kingwingfly/asyncrun"
-documentation = "https://docs.rs/xxx"
 
 [workspace.dependencies]
 asyncrun = { path = "asyncrun" }
