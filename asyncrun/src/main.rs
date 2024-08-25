@@ -20,10 +20,10 @@ use tokio_stream::wrappers::ReadDirStream;
 #[derive(Parser, Debug)]
 #[clap(name = "asyncrun", version, author, about)]
 struct Cli {
-    /// Filter by target names exist
+    /// Filter by file/dir names all exist
     #[arg(short = 'e')]
     exist: Option<Vec<String>>,
-    /// Filter by target names non exist
+    /// Filter by file/dir names all non-exist
     #[arg(short = 'E')]
     not_exist: Option<Vec<String>>,
     /// Number of async commands to run concurrently
@@ -50,7 +50,7 @@ async fn main() -> Result<()> {
                     && args
                         .exist
                         .as_ref()
-                        .map_or(true, |ns| ns.iter().any(|n| e.path().join(n).exists()))
+                        .map_or(true, |ns| ns.iter().all(|n| e.path().join(n).exists()))
                     && args
                         .not_exist
                         .as_ref()

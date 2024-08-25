@@ -22,7 +22,7 @@
 <h3 align="center">async_run</h3>
 
   <p align="center">
-    Asynchronously execute shell commands in selected subdirectories.
+    Asynchronously execute shell commands in filtered subdirectories.
     <br />
     <a href="https://github.com/kingwingfly/asyncrun"><strong>Explore the docs »</strong></a>
     <br />
@@ -117,7 +117,7 @@ Or compile yourself:
 ## Usage
 
 ```sh
-Asynchronously execute shell commands in selected subdirectories based on specified conditions.
+Asynchronously execute shell commands in filtered subdirectories
 
 Usage: asyncrun [OPTIONS] [PATH] -- <COMMANDS>...
 
@@ -126,8 +126,8 @@ Arguments:
   <COMMANDS>...  Commands to run in each directory
 
 Options:
-  -e <EXIST>          Filter by target names exist
-  -E <NOT_EXIST>      Filter by target names non exist
+  -e <EXIST>          Filter by file/dir names all exist
+  -E <NOT_EXIST>      Filter by file/dir names all non-exist
   -n <ASYNC_NUM>      Number of async commands to run concurrently [default: 1024]
   -h, --help          Print help
   -V, --version       Print version
@@ -138,7 +138,7 @@ Options:
 ```sh
 asyncrun -e .git -- "git fetch -p" "git pull --rebase" "git gc"
 asyncrun -e .git -e Cargo.toml -- "cargo update" "git add ." "git commit -m 'update deps'" "git push"
-asyncrun -e Cargo.toml -- "cargo clean"
+asyncrun -e Cargo.toml -e target -- "cargo clean"
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
