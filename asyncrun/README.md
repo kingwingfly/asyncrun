@@ -133,6 +133,14 @@ Options:
   -V, --version       Print version
 ```
 
+### Example
+
+```sh
+asyncrun -e .git -- "git fetch -p" "git pull --rebase" "git gc"
+asyncrun -e .git -e Cargo.toml -- "cargo update" "git add ." "git commit -m 'update deps'" "git push"
+asyncrun -e Cargo.toml -- "cargo clean"
+```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -207,6 +215,6 @@ Project Link: [https://github.com/kingwingfly/asyncrun](https://github.com/kingw
 [issues-url]: https://github.com/kingwingfly/asyncrun/issues
 [license-shield]: https://img.shields.io/github/license/kingwingfly/asyncrun.svg?style=for-the-badge
 [license-url]: https://github.com/kingwingfly/asyncrun/blob/master/LICENSE.txt
-[product-screenshot]: https://github.com/kingwingfly/asyncrun/blob/dev/images/screenshot.png
+[product-screenshot]: images/screenshot.png
 [Rust]: https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=Rust&logoColor=orange
 [Rust-url]: https://www.rust-lang.org
