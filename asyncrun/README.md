@@ -139,6 +139,7 @@ Options:
 asyncrun -e .git -- "git fetch -p" "git pull --rebase" "git gc"
 asyncrun -e .git -e Cargo.toml -- "cargo update" "git add ." "git commit -m 'update deps'" "git push"
 asyncrun -e Cargo.toml -e target -- "cargo clean"
+asyncrun -e .git -e .DS_Store -e .gitignore -- "git pull --rebase" "rm .DS_Store" "git add ." "git commit -m 'rm .DS_Store'" "grep -qxF '.DS_Store' .gitignore || echo '.DS_Store' >> .gitignore" "git add ." "git commit -m 'modified .gitignore'" "git push" | tee output.txt
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
