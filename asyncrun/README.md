@@ -70,6 +70,11 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://github.com/kingwingfly/asyncrun)
 
+Do things like `find . -type d -name ".git" | xargs -I _ -P 64 sh -c "cd _/.. && git pull --rebase &> /dev/tty"`
+easier if you're not a unix-pro guy.
+
+Instead, just `asyncrun -e .git -- "git pull --rebase"`.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

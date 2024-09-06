@@ -5,7 +5,7 @@ edition.workspace = true
 authors.workspace = true
 license.workspace = true
 repository.workspace = true
-description = "Asynchronously execute shell commands in filtered subdirectories"
+description = "Asynchronously execute shell commands in filtered subdirectories."
 
 [package.metadata.docs.rs]
 all-features = true
